@@ -117,33 +117,16 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
         if self.check_for_sorting() == True:
             self.sort_files()
 
-        def on_selection(selected):
-            selected_view = self.open_views[selected]
-            current_group = self.window.active_group()
-            selected_group = self.window.get_view_index(
-                self.open_views[selected])[0]
-            if selected > -1:
-                if current_group == selected_group:
-                    self.window.focus_view(selected_view)
-                else:
-                    self.window.focus_group(selected_group)
-                    self.window.focus_view(selected_view)
-                    self.window.focus_group(current_group)
-                    self.window.focus_view(self.qpanel)
-
         # show the file list
         ViewFinder.instance().start_listen(self.quick_panel_found)
-        self.window.show_quick_panel(self.open_files, self.tab_selected,
-                                     sublime.KEEP_OPEN_ON_FOCUS_LOST, current_tab_index, on_selection)
+        self.window.show_quick_panel(self.open_files, self.tab_selected, sublime.KEEP_OPEN_ON_FOCUS_LOST, current_tab_index)
 
     # display the selected open file
     def tab_selected(self, selected):
-
         if selected > -1:
             if self.settings.get('move_to_current_pane') == True:
                 self.window.set_view_index(self.open_views[selected], self.group, 0)
             self.window.focus_view(self.open_views[selected])
-
         else:
             self.window.focus_view(self.active_view)
 
