@@ -12,33 +12,33 @@
 				"children":
 				[
 					{
-						"caption": "Extended Tab Swticher",
+						"caption": "Kirikae",
 						"children":
 						[
 							{
 								"command": "open_file",
-								"args": {"file": "${packages}/ExtendedSwitcher/ExtendedSwitcher.sublime-settings"},
+								"args": {"file": "${packages}/Kirikae/Kirikae.sublime-settings"},
 								"caption": "Settings – Default"
 							},
 							{
 								"command": "open_file",
-								"args": {"file": "${packages}/User/ExtendedSwitcher.sublime-settings"},
+								"args": {"file": "${packages}/User/Kirikae.sublime-settings"},
 								"caption": "Settings – User"
 							},
 							{ "caption": "-" },
 							{
 								"command": "open_file",
-								"args": {"file": "${packages}/ExtendedSwitcher/Default (OSX).sublime-keymap", "platform":"OSX"},
+								"args": {"file": "${packages}/Kirikae/Default (OSX).sublime-keymap", "platform":"OSX"},
 								"caption": "Key Bindings – Default"
 							},
 							{
 								"command": "open_file",
-								"args": {"file": "${packages}/ExtendedSwitcher/Default (Windows).sublime-keymap", "platform":"Windows"},
+								"args": {"file": "${packages}/Kirikae/Default (Windows).sublime-keymap", "platform":"Windows"},
 								"caption": "Key Bindings – Default"
 							},
 							{
 								"command": "open_file",
-								"args": {"file": "${packages}/ExtendedSwitcher/Default (Linux).sublime-keymap", "platform":"Linux"},
+								"args": {"file": "${packages}/Kirikae/Default (Linux).sublime-keymap", "platform":"Linux"},
 								"caption": "Key Bindings – Default"
 							},
 

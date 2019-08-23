@@ -44,8 +44,7 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
         self.open_files = []
         self.open_views = []
         self.window = sublime.active_window()
-        self.settings = sublime.load_settings(
-            'ExtendedSwitcher.sublime-settings')
+        self.settings = sublime.load_settings('Kirikae.sublime-settings')
         self.active_view = self.window.active_view()
 
         folders = self.window.folders()
@@ -126,6 +125,7 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
         if selected > -1:
             if self.settings.get('move_to_current_pane') == True:
                 self.window.set_view_index(self.open_views[selected], self.group, 0)
+                print("move pane.....")
             self.window.focus_view(self.open_views[selected])
         else:
             self.window.focus_view(self.active_view)

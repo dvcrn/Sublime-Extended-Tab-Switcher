@@ -1,7 +1,9 @@
-Extended tab switcher for Sublime Text
+Kirikae for Sublime Text
 ==================================================
 
-**This plugin is inspired by the default tab switcher in netbeans**	 which displays the open files to choose from. View all open files (sorted/unsorted) for switching between them.
+Fork of https://github.com/rajeshvaya/Sublime-Extended-Tab-Switcher since that seems pretty inactive
+
+This plugin is for quickly switching to a given open tab. Tabs will be treated as buffers: It shouldn't matter in which window/group they are, switching should be easy.
 
 
 ## Key Bindings
@@ -10,12 +12,11 @@ Extended tab switcher for Sublime Text
 * On pressing `ctrl+alt+shift+tab` only open files in the active group will be displayed for selection.
 
 
-User can change the default key binding at `Preferences -> Package Settings -> Extended Tab Switcher -> Key Bindings User`
-
+User can change the default key binding at `Preferences -> Package Settings -> Tabulous -> Key Bindings User`
 
 
 ## Configurations
-User can overwrite the following configurations by adding flags in the User - Settings section which can be access by `Preferences -> Package Settings -> Extended Tab Switcher -> Settings - User`
+User can overwrite the following configurations by adding flags in the User - Settings section which can be access by `Preferences -> Package Settings -> Tabulous -> Settings - User`
 
 * Sorting
 
@@ -48,18 +49,18 @@ User can overwrite the following configurations by adding flags in the User - Se
 
 	```javascript
 	{
-		"mark_dirty_file_char": "<your-char>" 
+		"mark_dirty_file_char": "<your-char>"
 	}
 
 	```
 
-* Show full file path 
-	
+* Show full file path
+
 	By default the files listed will contain only the filename, This can be overwritten by adding the following flag in the settings
 
 	```javascript
 	{
-		"show_full_file_path": true 
+		"show_full_file_path": true
 	}
 
 	```
@@ -77,6 +78,8 @@ User can overwrite the following configurations by adding flags in the User - Se
 
 ## Credits
 
+David Mohl - [@dvcrn](https://github.com/dvcrn)
+
 Rajesh Vaya - [@rajeshvaya](https://github.com/rajeshvaya)
 
 Kohichi Aoki - [@drikin](https://github.com/drikin)
@@ -86,28 +89,6 @@ Philip Oliver - [@phildopus](https://github.com/phildopus)
 Rrg - [@rrg](https://github.com/rrg)
 
 
-This projected is licensed under the terms of the MIT license.
+## License
 
-```
-The MIT License (MIT)
-
-Copyright (c) [2014] [Rajesh Vaya <vaya.rajesh@gmail.com>]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+MIT
