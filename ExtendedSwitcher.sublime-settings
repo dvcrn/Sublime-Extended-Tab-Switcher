@@ -1,6 +1,6 @@
 {
-	// sort the files 
-	"sort": true,
+	// sort the files
+	"sort": false,
 
 	// Don't list current file?
 	"skip_current_file" : false,
@@ -9,7 +9,10 @@
 	// Also handy for filterig dirty files, if you type this string while the list is visible:
 	"mark_dirty_file_char" : "*",
 
-	//show full path with the filename
-	"show_full_file_path": true
+	// show full path with the filename
+	"show_full_file_path": true,
+
+	// When calling for the command, switches automatically to the next tab
+	"auto_select_next_tab": false
 }
 
