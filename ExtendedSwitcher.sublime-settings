@@ -10,10 +10,6 @@
 	"mark_dirty_file_char" : "*",
 
 	//show full path with the filename
-	"show_full_file_path": true,
-
-    // When set to true, the tab will be moved to the currently active
-    // pane, in case it was elsewhere.
-    "move_to_current_pane": false
+	"show_full_file_path": true
 }
 
