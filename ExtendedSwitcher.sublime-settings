@@ -13,6 +13,10 @@
 	"show_full_file_path": true,
 
 	// When calling for the command, switches automatically to the next tab
-	"auto_select_next_tab": false
+	"auto_select_next_tab": false,
+
+    // When set to true, the tab will be moved to the currently active
+    // pane, in case it was elsewhere.
+    "move_to_current_pane": false,
 }
 

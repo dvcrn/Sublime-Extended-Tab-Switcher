@@ -40,6 +40,7 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
 
     # lets go
     def run(self, list_mode):
+        self.group = self.window.active_group()
         self.open_files = []
         self.open_views = []
         self.window = sublime.active_window()
@@ -139,6 +140,8 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
     def tab_selected(self, selected):
 
         if selected > -1:
+            if self.settings.get('move_to_current_pane') == True:
+                self.window.set_view_index(self.open_views[selected], self.group, 0)
             self.window.focus_view(self.open_views[selected])
 
         else:
