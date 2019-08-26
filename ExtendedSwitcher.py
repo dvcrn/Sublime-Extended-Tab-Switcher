@@ -126,7 +126,17 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
                     self.window.focus_view(selected_view)
                 else:
                     file_name = selected_view.file_name()
-                    self.window.open_file(file_name,
+
+                    # if file name has not been saved yet we can't open it as preview, so just bail
+                    if file_name is None:
+                        return
+
+                    selection = selected_view.sel()
+                    cursor_position = selection[0]
+                    startPos, _ = cursor_position.begin(), cursor_position.end()
+                    row,col = selected_view.rowcol(startPos)
+
+                    self.window.open_file(file_name + ":" + str(row) + ":" + str(col),
                                           group=self.window.active_group(),
                                           flags=sublime.TRANSIENT | sublime.ENCODED_POSITION | sublime.FORCE_GROUP)
 
@@ -141,7 +151,6 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
         if selected > -1:
             if self.settings.get('move_to_current_pane') == True:
                 self.window.set_view_index(self.open_views[selected], self.group, 0)
-                print("move pane.....")
             self.window.focus_view(self.open_views[selected])
         else:
             self.window.focus_view(self.active_view)
