@@ -8,15 +8,14 @@ This plugin is for quickly switching to a given open tab. Tabs will be treated a
 
 ## Key Bindings
 
-* On pressing `ctrl+alt+tab` all open files will be displayed for selection.
-* On pressing `ctrl+alt+shift+tab` only open files in the active group will be displayed for selection.
+* On pressing `ctrl+alt+w` show all tabs inside the current window
+* On pressing `ctrl+alt+s` show all tabs inside the current split
 
-
-User can change the default key binding at `Preferences -> Package Settings -> Tabulous -> Key Bindings User`
+User can change the default key binding at `Preferences -> Package Settings -> Kiriake -> Key Bindings - User`
 
 
 ## Configurations
-User can overwrite the following configurations by adding flags in the User - Settings section which can be access by `Preferences -> Package Settings -> Tabulous -> Settings - User`
+User can overwrite the following configurations by adding flags in the User - Settings section which can be access by `Preferences -> Package Settings -> Kirikae -> Settings - User`
 
 * Sorting
 

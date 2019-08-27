@@ -1,4 +1,4 @@
 [
-    // { "keys": ["ctrl+tab"], "command": "extended_switcher", "args": {"list_mode": "active_group"} },
-    { "keys": ["ctrl+shift+tab"], "command": "extended_switcher", "args": {"list_mode": "window"} }
+    { "keys": ["ctrl+alt+w"], "command": "extended_switcher", "args": {"list_mode": "window"} },
+    { "keys": ["ctrl+tab+s"], "command": "extended_switcher", "args": {"list_mode": "active_group"} },
 ]
